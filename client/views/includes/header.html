@@ -5,6 +5,11 @@
             <ul class="nav pull-right">
                 <li>{{loginButtons}}</li>
             </ul>
+            {{#if currentUser}}
+                <ul class="nav pull-right">
+                    <li><a href="{{postSubmitPath}}">New</a></li>
+                </ul>
+            {{/if}}
         </div>
     </header>
 </template>
