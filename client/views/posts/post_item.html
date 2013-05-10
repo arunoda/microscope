@@ -9,7 +9,10 @@
 		{{#if fromPostPage}}
 			<a href="{{postsListPath}}" class="discuss btn btn-mini btn-warning">Back</a>
 		{{else}}
-			<a href="{{postPagePath this}}" class="discuss btn btn-mini btn-info">Discuss</a>
+			<a href="{{postPagePath this}}" class="discuss btn btn-mini btn-info">Discuss</a> 
+		{{/if}}
+		{{#if ownPost}}
+			<a href="{{postEditPath this}}" class="discuss btn btn-mini btn-success" style='margin-right: 5px'>Edit</a>
 		{{/if}}
 	</div>
 </template>
