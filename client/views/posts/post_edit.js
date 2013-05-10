@@ -16,7 +16,7 @@ Template.postEdit.events({
         var postId = Session.get('currentPostId');
         Posts.update({_id: postId}, {$set: postData}, function(err) {
             if(err) {
-                alert(err.reason);
+                throwError(err.reason);
             } else {
                 Meteor.Router.to('postPage', {_id: postId});
             }

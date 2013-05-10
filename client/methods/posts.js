@@ -1,6 +1,7 @@
 Meteor.methods({
     "post": function(postData) {
         postData.submitted = Date.now();
-        Posts.insert(postData)
+        var id = Posts.insert(postData)
+        Session.set('pendingPostId', id);
     }
 });

@@ -24,7 +24,13 @@ Meteor.Router.filters({
         } else {
             return "accessDenied";
         }
+    },
+
+    "clearErrors": function(page) {
+        clearErrors();
+        return page;
     }
 });
 
+Meteor.Router.filter("clearErrors");
 Meteor.Router.filter("checkLogin", {only: "postSubmit"});
