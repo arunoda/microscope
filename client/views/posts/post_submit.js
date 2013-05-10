@@ -12,10 +12,9 @@ Template.postSubmit.events({
 
             if(err) {
                 alert(err.reason);
-            } else {
-                post._id = id;
-                Meteor.Router.to('postPage', post);
             }
         });
+        
+        Meteor.Router.to('postsList');
     }
 });
