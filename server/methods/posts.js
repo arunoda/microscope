@@ -15,8 +15,7 @@ Meteor.methods({
             throw new Meteor.Error(302, "URL already exists", existingPostWithUrl._id);
         }
 
-
-        var post = _.extend(_.pick(postData, 'url', 'title', 'message'), {
+        var post = _.extend(_.pick(postData, '_id', 'url', 'title', 'message'), {
             author: user.username, 
             userId: user._id,
             submitted: Date.now()

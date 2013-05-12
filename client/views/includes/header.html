@@ -6,8 +6,11 @@
                 <li>{{loginButtons}}</li>
             </ul>
             {{#if currentUser}}
-                <ul class="nav pull-right">
+                <ul class="nav">
                     <li><a href="{{postSubmitPath}}">New</a></li>
+                    <li class="dropdown">
+                        {{> notifications}}
+                    </li>
                 </ul>
             {{/if}}
         </div>

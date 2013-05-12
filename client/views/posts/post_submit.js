@@ -3,6 +3,7 @@ Template.postSubmit.events({
         event.preventDefault();
 
         var post = {
+            _id: Meteor.uuid(),
             url: $("[name=url]", event.target).val(),
             title: $('[name=title]', event.target).val(),
             message: $('[name=message]', event.target).val()

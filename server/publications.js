@@ -1,8 +1,11 @@
 Meteor.publish('posts', function() {
-    // return Posts.find({}, {sort: {submitted: -1}});
     return Posts.find({});
 });
 
 Meteor.publish('comments', function(postId) { 
     return Comments.find({postId: postId});
+});
+
+Meteor.publish('notifications', function() {
+    return Notifications.find({to: this.userId, read: false});
 });
