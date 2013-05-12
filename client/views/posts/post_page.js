@@ -6,5 +6,11 @@ Template.postPage.helpers({
             post.fromPostPage = true;
         }
         return post;
+    },
+
+    comments: function() {
+        var postId = Session.get('currentPostId');
+        var comments = Comments.find({postId: postId}, {sort: {submitted: -1}});
+        return comments;
     }
 });

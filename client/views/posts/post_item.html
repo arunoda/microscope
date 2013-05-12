@@ -5,6 +5,10 @@
 				<a href="{{url}}">{{title}}</a>
 				<span>{{domain}}</span>
 			</h3>
+			<p>
+				submitted by {{author}},
+				<a href="{{postPagePath this}}">{{commentsCount}} comments</a>
+			</p>
 		</div>
 		{{#if fromPostPage}}
 			<a href="{{postsListPath}}" class="discuss btn btn-mini btn-warning">Back</a>

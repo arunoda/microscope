@@ -1,3 +1,4 @@
 Meteor.subscribe('posts');
-
-//Learn Meteor Pub Sub
+Meteor.autorun(function() {
+    Meteor.subscribe('comments', Session.get('currentPostId'));
+});

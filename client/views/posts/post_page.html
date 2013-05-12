@@ -2,4 +2,13 @@
 	{{#with currentPost}}
 		{{> postItem}}
 	{{/with}}
+	<h4>Comments</h4>
+	{{#if currentUser}}
+		{{> commentSubmit}}
+	{{/if}}
+	<ul class='comments'>
+		{{#each comments}}
+			{{> comment}}
+		{{/each}}
+	</ul>
 </template>
