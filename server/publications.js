@@ -1,5 +1,6 @@
 Meteor.publish('posts', function() {
     var sub = this;
+    
     var handle = Posts.find({}).observe({
         added: function(doc) {
             sub.added('posts', doc._id, doc);

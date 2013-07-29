@@ -1,3 +1,4 @@
+Meteor._RemoteCollectionDriver.open = function() {}
 Meteor.startup(function() {
-    console.log("Starting up Microscope with Meteor!");
+    console.log('started microscope app!', Meteor.serverId);
 });

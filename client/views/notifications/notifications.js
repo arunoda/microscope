@@ -1,10 +1,10 @@
 Template.notifications.helpers({
 
     notificationCount: function() {
-        return Notifications.find().count();
+        return Notifications.find({to: Meteor.userId()}).count();
     }, 
 
     notifications: function() {
-        return Notifications.find();
+        return Notifications.find({to: Meteor.userId()});
     }
 });
